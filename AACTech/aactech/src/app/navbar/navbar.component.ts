@@ -8,10 +8,18 @@ import { GlobalService } from 'src/services/global.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+  validarSpeak: GlobalService; 
 
   constructor(private router: Router, private global: GlobalService) {
+    this.validarSpeak=global;
   }
 
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+  }
+
+  habilitarboton(){
+    this.global.band=!this.global.band; 
+  }
 
 }
