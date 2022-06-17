@@ -3,25 +3,23 @@
         <div class="logo">Iniciar Sesion</div>
         <!-- Main Form -->
         <div class="login-form-1">
-            <form id="login-form" class="text-left">
                 <div class="login-form-main-message"></div>
                 <div class="main-login-form">
                     <div class="login-group">
                         <div class="form-group">
                             <label for="lg_username" class="sr-only">Username</label>
-                            <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="Correo Electronico">
+                            <input type="text" class="form-control" placeholder="Correo Electronico" [(ngModel)]="usuario.email">
                         </div>
                         <div class="form-group">
                             <label for="lg_password" class="sr-only">Password</label>
-                            <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="Contraseña">
+                            <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="usuario.password">
                         </div>
                     </div>
-                    <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                    <button type="submit" class="login-button" (click)="singin();"><i class="fa fa-chevron-right"></i></button>
                 </div>
                 <div class="etc-login-form">
                     <p>Nuevo Usuario? <a [routerLink]="['/register']">Registrate</a></p>
                 </div>
-            </form>
         </div>
         <!-- end:Main Form -->
 </div>

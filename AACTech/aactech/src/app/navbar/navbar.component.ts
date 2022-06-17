@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from 'src/services/global.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,8 +10,9 @@ import { GlobalService } from 'src/services/global.service';
 })
 export class NavbarComponent implements OnInit {
   validarSpeak: GlobalService; 
+  userLogged=this.authService.getUserLogged();
 
-  constructor(private router: Router, private global: GlobalService) {
+  constructor(private router: Router, private global: GlobalService,private authService: AuthService) {
     this.validarSpeak=global;
   }
 
@@ -20,6 +22,16 @@ export class NavbarComponent implements OnInit {
 
   habilitarboton(){
     this.global.band=!this.global.band; 
+  }
+
+  logout(){
+    this.authService.logout();
+  }
+
+  usuarioLogeado(){
+    this.authService.getUserLogged().subscribe(res=>{
+      console.log(res?.email);
+    })
   }
 
 }
