@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { LoginTelComponent } from './login-tel/login-tel.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductosComponent } from './productos/productos.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'contacto', component: ContactoComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'telefono',component: LoginTelComponent},
   {path: '**',pathMatch:'full',redirectTo:'inicio'},
 ];
 

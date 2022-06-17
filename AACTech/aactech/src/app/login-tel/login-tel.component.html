@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="text-center" style="padding:50px 0">
+        <div class="logo">Iniciar Sesion Numero de Telefono</div>
+        <!-- Main Form -->
+        <div class="login-form-1">
+                <div class="login-form-main-message"></div>
+                <div class="main-login-form">
+                    <div class="login-group">
+                        <div class="form-group">
+                            <label for="lg_username" class="sr-only">Numero de Telefono</label>
+                            <input type="text" #numeroTel class="form-control" placeholder="Numero de telefono">
+                        </div>
+                        <div id="recaptcha-container"></div>
+                        <button type="submit" class="btn btn-light" (click)="code('+52'+numeroTel.value)">Enviar Codigo<i class="fa fa-chevron-right"></i></button>
+                        <div class="form-group">
+                            <label for="lg_password" class="sr-only">Codigo</label>
+                            <input type="password" #codigo class="form-control" placeholder="Codigo">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-light" (click)="codeVerify(codigo.value)">Verificar Codigo<i class="fa fa-chevron-right"></i></button>
+                </div>
+                <div class="etc-login-form">
+                    <p>Nuevo Usuario? <a [routerLink]="['/register']">Registrate</a></p>
+                    <p>Correo y Contraseña <a [routerLink]="['/login']">Regresar</a></p>
+                </div>
+                
+        </div>
+        <!-- end:Main Form -->
+</div>

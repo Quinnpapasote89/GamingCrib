@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { LoginTelComponent } from './login-tel/login-tel.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { environment } from 'src/environments/environment';
     ProductosComponent,
     ContactoComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginTelComponent
   ],
   imports: [
     BrowserModule,
