@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from 'src/services/global.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -12,7 +13,8 @@ export class AboutComponent implements OnInit {
   mensaje: any;
   oracion: any;
 
-  constructor(global: GlobalService) { 
+  constructor(private global: GlobalService,private router: Router) {
+     
     if ('speechSynthesis' in window) {
       this.mensaje = new SpeechSynthesisUtterance();
     } else {
@@ -20,10 +22,15 @@ export class AboutComponent implements OnInit {
     }
     this.validarSpeak = global;
     console.log(this.validarSpeak);
+    this.validarSpeak = global;
   }
 
 
   ngOnInit(): void {
+  }
+
+  habilitarboton() {
+    this.global.band = !this.global.band;
   }
 
   playSpeak(t1:string) {  

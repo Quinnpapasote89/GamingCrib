@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent,
+    ProductosComponent,
+    ContactoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
