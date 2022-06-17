@@ -17,6 +17,7 @@ const routes: Routes = [
   {path: 'contacto', component: ContactoComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: '**',pathMatch:'full',redirectTo:'inicio'},
 ];
 
 @NgModule({
