@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment';
 import { LoginTelComponent } from './login-tel/login-tel.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminChartComponent } from './admin-chart/admin-chart.component';
+import { VistaComponent } from './vista/vista.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdminChartComponent } from './admin-chart/admin-chart.component';
     RegisterComponent,
     LoginTelComponent,
     AdminComponent,
-    AdminChartComponent
+    AdminChartComponent,
+    VistaComponent
   ],
   imports: [
     BrowserModule,

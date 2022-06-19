@@ -11,6 +11,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminChartComponent } from './admin-chart/admin-chart.component';
+import { VistaComponent } from './vista/vista.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'telefono',component: LoginTelComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'admin-chart', component:AdminChartComponent},
+  {path: 'vista/:id', component: VistaComponent},
   {path: '**',pathMatch:'full',redirectTo:'inicio'},
 ];
 

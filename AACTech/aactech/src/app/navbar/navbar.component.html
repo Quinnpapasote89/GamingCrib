@@ -10,7 +10,7 @@
                 <button (click)="habilitarboton()" style="background-color: white;"><i class="fas fa-assistive-listening-systems" style="color: black;"></i></button>
             </div>
             <div>
-                <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                <a class="text-light" href="https://fb.com/" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
                 <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
                 <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
                 <span *ngIf="userLogged|async as user">{{user.email}}</span>
@@ -70,7 +70,7 @@
                 </div>
                 <div class=" flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                 <span class="nav-icon position-relative text-decoration-none" href="#">
-                    <button class="btn btn-block btn-info" (click)="logout();">Cerrar Sesion</button>
+                    <button class="btn btn-block btn-primary" (click)="logout();">Cerrar Sesion</button>
                 </span>
                 </div>
                 <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
