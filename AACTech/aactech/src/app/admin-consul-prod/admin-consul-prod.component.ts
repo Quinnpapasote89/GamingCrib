@@ -13,11 +13,12 @@ export class AdminConsulProdComponent implements OnInit {
 
   constructor(private dataService: DataService) {
     this.productos= [{
-      nombre: 'Prueba',
-      marca: 'aa',
-      categoria: 'aa',
-      descripcion: 'aa',
-      precio: 'aa'
+      nombre: '',
+      marca: '',
+      categoria: '',
+      descripcion: '',
+      precio: '',
+      fuenteImagen: ' '
     }];
    }
 

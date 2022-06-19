@@ -51,6 +51,14 @@
         <label class="form-label">Precio</label>
         <input type="text" class="form-control" formControlName="precio">
       </div>
-      <input type="submit" value="Enviar" class="btn btn-info">
+      <div class="mb-3">
+        <label class="form-label">Imagen</label>
+      </div>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="imagen" (change)="onFileChange($event)">
+        <label class="custom-file-label" for="customFile">Choose file</label>
+      </div>
+      <div class="mb-3"></div>
+      <input type="submit" value="Enviar" class="mb-5 btn btn-info">
   </form>
 

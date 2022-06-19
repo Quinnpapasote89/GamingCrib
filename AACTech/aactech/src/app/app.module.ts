@@ -30,6 +30,8 @@ import { AdminConsulPedidosComponent } from './admin-consul-pedidos/admin-consul
 import { HistorialComponent } from './historial/historial.component';
 import { DashadminComponent } from './dashadmin/dashadmin.component';
 import { AdminProdEditComponent } from './admin-prod-edit/admin-prod-edit.component';
+import { StorageModule } from '@angular/fire/storage';
+
 
 @NgModule({
   declarations: [
@@ -62,6 +64,7 @@ import { AdminProdEditComponent } from './admin-prod-edit/admin-prod-edit.compon
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    StorageModule,
     AngularFireModule.initializeApp(environment.firebase),
     NgChartsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),

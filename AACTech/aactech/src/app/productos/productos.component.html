@@ -2,60 +2,30 @@
     <div class="row">
 
         <div class="col-lg-3">
-            <h1 class="h2 pb-4">Categorias</h1>
-            <ul class="list-unstyled templatemo-accordion">
-                <li class="pb-3">
-                    <a class="collapsed d-flex justify-content-between h3 text-decoration-none categoria" href="#">
-                        Computadoras
-                    </a>
-                </li>
-                <li class="pb-3">
-                    <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                        Monitores
-                    </a>
-                </li>
-                <li class="pb-3">
-                    <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                        Accesorios
-                    </a>
-                </li>
-            </ul>
+            <h1 class="h2 pb-4">Productos</h1>
         </div>
 
         <div class="col-lg-9">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" *ngFor="let producto of productos">
                     <div class="card mb-4 product-wap rounded-0">
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_01.jpg">
+                        <div class="card rounded-0" >
+                            <img class="card-img rounded-0 img-fluid">
                             <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                 <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white mt-2" [routerLink]="['/vista/1']"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" [routerLink]="['/vista/',producto.id]"><i class="far fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="card-body">
-                            <a href="shop-single.html" class="h3 text-decoration-none">Nombre producto</a>
+                            <a href="shop-single.html" class="h3 text-decoration-none">{{producto.nombre}}</a>
                             <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                <li>Categoria</li>
+                                <li>{{producto.categoria}}</li>
                             </ul>
-                            <p class="text-center mb-0">Precio:$250.00</p>
+                            <p class="text-center mb-0">Precio: ${{producto.precio}}</p>
                         </div>
                     </div>
                 </div>
-<!--             <div div="row">
-                <ul class="pagination pagination-lg justify-content-end">
-                    <li class="page-item disabled">
-                        <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
-                    </li>
-                </ul>
-            </div> -->
         </div>
 
     </div>

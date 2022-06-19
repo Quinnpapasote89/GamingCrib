@@ -5,4 +5,5 @@ export default interface Productos {
     categoria: string;
     descripcion: string;
     precio: string;
+    fuenteImagen: string;
 }
