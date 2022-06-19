@@ -20,9 +20,10 @@ export class AdminAddproductoComponent implements OnInit {
       nombre: new FormControl(' ', [Validators.required, Validators.minLength(4)]),
       marca: new FormControl(' ', [Validators.required]),
       categoria: new FormControl(' ', [Validators.required]),
-      descripcion: new FormControl(' ', [Validators.required, Validators.minLength(10)]),
+      descripcion: new FormControl(' ', [Validators.required, Validators.minLength(10), Validators.maxLength(60)]),
       precio: new FormControl(' ', [Validators.required, Validators.minLength(2)]),
-      fuenteImagen: new FormControl()
+      fuenteImagen: new FormControl(),
+      fuenteOrigen: new FormControl()
     })
    }
 
@@ -36,7 +37,8 @@ export class AdminAddproductoComponent implements OnInit {
       this.imgRef = ref(this.storage, `images/${this.file.name}`);
       const direccion='images/'+this.file.name;
       this.formulario.patchValue({
-        fuenteImagen: direccion
+        fuenteImagen: direccion,
+        fuenteOrigen: this.file.name
       });
       uploadBytes(this.imgRef,this.file).then(response => console.log(response)).catch(error => console.log(error));
     }

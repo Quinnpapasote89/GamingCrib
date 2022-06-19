@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Storage, ref, uploadBytes } from '@angular/fire/storage'
-import { getDownloadURL, listAll } from 'firebase/storage';
+import { getStorage, Storage, ref } from '@angular/fire/storage'
+import { getDownloadURL, list, listAll } from 'firebase/storage';
 import Productos from '../interfaces/productos';
 import { DataService } from '../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-productos',
@@ -13,7 +14,11 @@ import { DataService } from '../services/data.service';
 export class ProductosComponent implements OnInit {
 
   productos: Productos[];
+  aux= 0;
 
+  images: string[] = [];
+  imagen!: string;
+  
   constructor(private router: Router,private storage:Storage,private dataService: DataService) {
     this.productos= [{
       nombre: '',
@@ -21,7 +26,8 @@ export class ProductosComponent implements OnInit {
       categoria: '',
       descripcion: '',
       precio: '',
-      fuenteImagen: ' '
+      fuenteImagen: ' ',
+      fuenteOrigen: ' '
     }];
    }
 
@@ -32,14 +38,22 @@ export class ProductosComponent implements OnInit {
     });
   }
 
-  getImage(img:string){
-    const imagesRef = ref(this.storage, 'images/'+img);
 
-    getDownloadURL(imagesRef).then((url) => {
-      const img = document.getElementById('prod'+0);
-      img?.setAttribute('src',url);
-    })
+  getImages(id:string): void{
+    const storage = getStorage();
+    const starRef = ref(storage, id);
+    console.log(id);
+     getDownloadURL(starRef)
+    .then(url => {
+      return(url);
+    }); 
+  }
 
+  cargarImagen(id:any,nombre:any){
+    document?.getElementById(""+id)?.setAttribute('src', 'assets/img/imgProd/'+nombre);
+  }
+
+  guardarInfo(){
     
   }
 

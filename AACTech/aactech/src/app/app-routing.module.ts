@@ -18,6 +18,7 @@ import { AdminConsulProvComponent } from './admin-consul-prov/admin-consul-prov.
 import { AdminAddProvComponent } from './admin-add-prov/admin-add-prov.component';
 import { AdminConsulIngresosComponent } from './admin-consul-ingresos/admin-consul-ingresos.component';
 import { AdminConsulPedidosComponent } from './admin-consul-pedidos/admin-consul-pedidos.component';
+import { HistorialComponent } from './historial/historial.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'telefono',component: LoginTelComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'admin-chart', component:AdminChartComponent},
+  {path: 'historial',component:HistorialComponent},
   {path: 'vista/:id', component: VistaComponent},
   {path: 'adminaddproducto', component: AdminAddproductoComponent},
   {path: 'adminProdConsul',component: AdminConsulProdComponent},

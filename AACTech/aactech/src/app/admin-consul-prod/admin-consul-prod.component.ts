@@ -18,7 +18,8 @@ export class AdminConsulProdComponent implements OnInit {
       categoria: '',
       descripcion: '',
       precio: '',
-      fuenteImagen: ' '
+      fuenteImagen: ' ',
+      fuenteOrigen: ' ' 
     }];
    }
 

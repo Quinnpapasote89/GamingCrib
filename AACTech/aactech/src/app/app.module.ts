@@ -56,7 +56,7 @@ import { StorageModule } from '@angular/fire/storage';
     AdminConsulPedidosComponent,
     HistorialComponent,
     DashadminComponent,
-    AdminProdEditComponent
+    AdminProdEditComponent,
   ],
   imports: [
     BrowserModule,

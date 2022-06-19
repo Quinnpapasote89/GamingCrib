@@ -6,4 +6,5 @@ export default interface Productos {
     descripcion: string;
     precio: string;
     fuenteImagen: string;
+    fuenteOrigen: string;
 }
