@@ -18,6 +18,7 @@ import { LoginTelComponent } from './login-tel/login-tel.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminChartComponent } from './admin-chart/admin-chart.component';
 import { VistaComponent } from './vista/vista.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,6 @@ import { VistaComponent } from './vista/vista.component';
     LoginTelComponent,
     AdminComponent,
     AdminChartComponent,
-    VistaComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +42,7 @@ import { VistaComponent } from './vista/vista.component';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    NgChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
