@@ -4,9 +4,9 @@
         <div class="w-100 d-flex justify-content-between">
             <div>
                 <i class="fa fa-envelope mx-2"></i>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:aactech_merchand@gmail.com">aactech_merchand@gmail.com</a>
+                <a class="navbar-sm-brand text-light text-decoration-none" >aactechmerchand@gmail.com</a>
                 <i class="fa fa-phone mx-2"></i>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">449 143 67 89 &nbsp;</a>
+                <a class="navbar-sm-brand text-light text-decoration-none" >449 143 67 89 &nbsp;</a>
                 <button (click)="habilitarboton()" style="background-color: white;"><i class="fas fa-assistive-listening-systems" style="color: black;"></i></button>
             </div>
             <div>
@@ -49,23 +49,27 @@
                 </ul>
             </div>
             <div class="navbar align-self-center d-flex">
-                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                <!-- <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                     <div class="input-group">
                         <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
                         <div class="input-group-text">
                             <i class="fa fa-fw fa-search"></i>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                     <i class="fa fa-fw fa-search text-dark mr-2"></i>
                 </a> -->
-                <span class="nav-icon position-relative text-decoration-none" href="#">
-                    <button class="btn btn-block btn-success" [routerLink]="['login']">Iniciar Sesion</button>
-                </span>
+                <div class=" flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <span class="nav-icon position-relative text-decoration-none" href="#">
+                        <button class="btn btn-block btn-success" [routerLink]="['login']">Iniciar Sesion</button>
+                    </span>
+                </div>
+                <div class=" flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                 <span class="nav-icon position-relative text-decoration-none" href="#">
                     <button class="btn btn-block btn-info" (click)="logout();">Cerrar Sesion</button>
                 </span>
+                </div>
                 <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
                     <i class="fa fa-fw fa-user text-dark mr-3"></i>
                     <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
