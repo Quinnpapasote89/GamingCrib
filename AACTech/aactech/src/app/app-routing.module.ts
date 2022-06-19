@@ -17,6 +17,7 @@ import { AdminConsulProdComponent } from './admin-consul-prod/admin-consul-prod.
 import { AdminConsulProvComponent } from './admin-consul-prov/admin-consul-prov.component';
 import { AdminAddProvComponent } from './admin-add-prov/admin-add-prov.component';
 import { AdminConsulIngresosComponent } from './admin-consul-ingresos/admin-consul-ingresos.component';
+import { AdminConsulPedidosComponent } from './admin-consul-pedidos/admin-consul-pedidos.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path: 'adminProvConsul',component: AdminConsulProvComponent},
   {path: 'adminaddprov',component: AdminAddProvComponent},
   {path: 'consulingre',component: AdminConsulIngresosComponent},
+  {path: 'pedidosconsul',component: AdminConsulPedidosComponent},
   {path: '**',pathMatch:'full',redirectTo:'inicio'},
 ];
 

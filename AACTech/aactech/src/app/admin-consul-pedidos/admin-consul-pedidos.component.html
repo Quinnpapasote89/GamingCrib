@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let pedidos of pedido">
+        <div >
+            <h4>{{pedidos.nombre}}</h4>
+            <p>{{pedidos.cliente}}</p>
+            <p>{{pedidos.precio}}</p>
+            <button class="btn btn-outline-danger" (click)="onClickDelete(pedidos)">Borrar</button>
+        </div>
+    </div>
+</div>
