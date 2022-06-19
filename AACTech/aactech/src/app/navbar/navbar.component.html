@@ -72,7 +72,7 @@
                 </div>
                 <div class=" flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                 <span class="nav-icon position-relative text-decoration-none" href="#">
-                    <button class="btn btn-block btn-primary" (click)="logout();">Cerrar Sesion</button>
+                    <button class="btn btn-block btn-primary" (click)="logout();" *ngIf="userLogged|async as user">Cerrar Sesion</button>
                 </span>
                 </div>
                 <!-- <a class="nav-icon position-relative text-decoration-none" href="#">
