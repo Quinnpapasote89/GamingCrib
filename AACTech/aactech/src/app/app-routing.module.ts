@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProductosComponent } from './productos/productos.component';
 import { RegisterComponent } from './register/register.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminChartComponent } from './admin-chart/admin-chart.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'telefono',component: LoginTelComponent},
+  {path: 'admin', component: AdminComponent},
+  {path: 'admin-chart', component:AdminChartComponent},
   {path: '**',pathMatch:'full',redirectTo:'inicio'},
 ];
 

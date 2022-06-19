@@ -15,6 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { LoginTelComponent } from './login-tel/login-tel.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminChartComponent } from './admin-chart/admin-chart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { LoginTelComponent } from './login-tel/login-tel.component';
     ContactoComponent,
     LoginComponent,
     RegisterComponent,
-    LoginTelComponent
+    LoginTelComponent,
+    AdminComponent,
+    AdminChartComponent
   ],
   imports: [
     BrowserModule,
