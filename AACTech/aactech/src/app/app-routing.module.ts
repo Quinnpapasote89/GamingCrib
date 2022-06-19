@@ -14,6 +14,9 @@ import { AdminChartComponent } from './admin-chart/admin-chart.component';
 import { VistaComponent } from './vista/vista.component';
 import { AdminAddproductoComponent } from './admin-addproducto/admin-addproducto.component';
 import { AdminConsulProdComponent } from './admin-consul-prod/admin-consul-prod.component';
+import { AdminConsulProvComponent } from './admin-consul-prov/admin-consul-prov.component';
+import { AdminAddProvComponent } from './admin-add-prov/admin-add-prov.component';
+import { AdminConsulIngresosComponent } from './admin-consul-ingresos/admin-consul-ingresos.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -29,6 +32,9 @@ const routes: Routes = [
   {path: 'vista/:id', component: VistaComponent},
   {path: 'adminaddproducto', component: AdminAddproductoComponent},
   {path: 'adminProdConsul',component: AdminConsulProdComponent},
+  {path: 'adminProvConsul',component: AdminConsulProvComponent},
+  {path: 'adminaddprov',component: AdminAddProvComponent},
+  {path: 'consulingre',component: AdminConsulIngresosComponent},
   {path: '**',pathMatch:'full',redirectTo:'inicio'},
 ];
 

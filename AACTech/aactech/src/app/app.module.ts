@@ -23,6 +23,9 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AdminAddproductoComponent } from './admin-addproducto/admin-addproducto.component';
 import { AdminConsulProdComponent } from './admin-consul-prod/admin-consul-prod.component';
+import { AdminAddProvComponent } from './admin-add-prov/admin-add-prov.component';
+import { AdminConsulProvComponent } from './admin-consul-prov/admin-consul-prov.component';
+import { AdminConsulIngresosComponent } from './admin-consul-ingresos/admin-consul-ingresos.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { AdminConsulProdComponent } from './admin-consul-prod/admin-consul-prod.
     AdminChartComponent,
     VistaComponent,
     AdminAddproductoComponent,
-    AdminConsulProdComponent
+    AdminConsulProdComponent,
+    AdminAddProvComponent,
+    AdminConsulProvComponent,
+    AdminConsulIngresosComponent
   ],
   imports: [
     BrowserModule,

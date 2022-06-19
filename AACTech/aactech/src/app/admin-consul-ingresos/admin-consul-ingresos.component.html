@@ -1,0 +1,9 @@
+<div>
+    <div *ngFor="let ingresos of ingreso">
+        <div >
+            <h4>{{ingresos.productos}}</h4>
+            <p>{{ingresos.precio}}</p>
+            <button class="btn btn-outline-danger" (click)="onClickDelete(ingresos)">Borrar</button>
+        </div>
+    </div>
+</div>

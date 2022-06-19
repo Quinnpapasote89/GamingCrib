@@ -1,0 +1,11 @@
+<div>
+    <div *ngFor="let proveedores of proveedor">
+        <div >
+            <h4>{{proveedores.nombre}}</h4>
+            <p>{{proveedores.rfc}}</p>
+            <p>{{proveedores.direccion}}</p>
+            <p>{{proveedores.ciudad}}</p>
+            <button class="btn btn-outline-danger" (click)="onClickDelete(proveedores)">Borrar</button>
+        </div>
+    </div>
+</div>
