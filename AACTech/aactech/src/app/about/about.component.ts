@@ -44,6 +44,29 @@ export class AboutComponent implements OnInit {
     }
   }
 
+  playSpeak2(t2:string) {  
+    this.oracion = document.getElementById(t2)!.innerHTML;
+    this.mensaje.text= this.oracion; 
+    if(speechSynthesis.paused){
+      speechSynthesis.resume();
+    }else{
+      speechSynthesis.cancel();
+      speechSynthesis.speak(this.mensaje);
+    }
+  }
+
+  playSpeak3(t3:string) {  
+    this.oracion = document.getElementById(t3)!.innerHTML;
+    this.mensaje.text= this.oracion; 
+    if(speechSynthesis.paused){
+      speechSynthesis.resume();
+    }else{
+      speechSynthesis.cancel();
+      speechSynthesis.speak(this.mensaje);
+    }
+  }
+  
+
   stopSpeak(){
     speechSynthesis.pause();
   }
