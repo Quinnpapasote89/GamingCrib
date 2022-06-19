@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AboutComponent } from './about/about.component';
@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminChartComponent } from './admin-chart/admin-chart.component';
 import { VistaComponent } from './vista/vista.component';
+import { AdminAddproductoComponent } from './admin-addproducto/admin-addproducto.component';
+import { AdminConsulProdComponent } from './admin-consul-prod/admin-consul-prod.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -25,6 +27,8 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent},
   {path: 'admin-chart', component:AdminChartComponent},
   {path: 'vista/:id', component: VistaComponent},
+  {path: 'adminaddproducto', component: AdminAddproductoComponent},
+  {path: 'adminProdConsul',component: AdminConsulProdComponent},
   {path: '**',pathMatch:'full',redirectTo:'inicio'},
 ];
 

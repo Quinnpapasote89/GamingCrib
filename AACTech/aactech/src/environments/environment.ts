@@ -13,14 +13,6 @@ export const environment = {
     messagingSenderId: '942620816283',
   },
   production: false,
-  firebaseConfig: {
-    apiKey: "AIzaSyBlF-J1MTP8gqHbeKrzq1xg7PKdjytm1Pw",
-    authDomain: "aactech-be723.firebaseapp.com",
-    projectId: "aactech-be723",
-    storageBucket: "aactech-be723.appspot.com",
-    messagingSenderId: "942620816283",
-    appId: "1:942620816283:web:e3d1a85e7370385c22e73e"
-  }
 };
 
 /*

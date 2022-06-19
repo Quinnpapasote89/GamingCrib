@@ -1,0 +1,12 @@
+<div>
+    <div *ngFor="let productos of productos">
+        <div >
+            <h4>{{productos.nombre}}</h4>
+            <p>{{productos.marca}}</p>
+            <p>{{productos.categoria}}</p>
+            <p>{{productos.descripcion}}</p>
+            <p>{{productos.precio}}</p>
+            <button class="btn btn-outline-danger" (click)="onClickDelete(productos)">Borrar</button>
+        </div>
+    </div>
+</div>

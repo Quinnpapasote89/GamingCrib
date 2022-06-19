@@ -21,6 +21,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { AdminAddproductoComponent } from './admin-addproducto/admin-addproducto.component';
+import { AdminConsulProdComponent } from './admin-consul-prod/admin-consul-prod.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     LoginTelComponent,
     AdminComponent,
     AdminChartComponent,
-    VistaComponent
+    VistaComponent,
+    AdminAddproductoComponent,
+    AdminConsulProdComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebase),
     NgChartsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
