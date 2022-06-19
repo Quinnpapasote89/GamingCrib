@@ -34,6 +34,7 @@ import { NgChartsModule } from 'ng2-charts';
     LoginTelComponent,
     AdminComponent,
     AdminChartComponent,
+    VistaComponent
   ],
   imports: [
     BrowserModule,
