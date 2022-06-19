@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
     const {email,password}=this.usuario;
     this.authService.register(email,password).then(res=>{
       console.log("Se registro con exito ",res);
+      this.router.navigate(['/inicio']);
     });
   }
 
