@@ -13,12 +13,14 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from 'src/environments/environment';
 import { LoginTelComponent } from './login-tel/login-tel.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminChartComponent } from './admin-chart/admin-chart.component';
 import { VistaComponent } from './vista/vista.component';
 import { NgChartsModule } from 'ng2-charts';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { NgChartsModule } from 'ng2-charts';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     NgChartsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]
