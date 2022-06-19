@@ -27,10 +27,11 @@ export class NavbarComponent implements OnInit {
   logout(){
     this.authService.logout();
   }
-
+  
   usuarioLogeado(){
     this.authService.getUserLogged().subscribe(res=>{
       console.log(res?.email);
+  
     })
   }
 

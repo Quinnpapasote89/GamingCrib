@@ -27,6 +27,7 @@ import { AdminAddProvComponent } from './admin-add-prov/admin-add-prov.component
 import { AdminConsulProvComponent } from './admin-consul-prov/admin-consul-prov.component';
 import { AdminConsulIngresosComponent } from './admin-consul-ingresos/admin-consul-ingresos.component';
 import { AdminConsulPedidosComponent } from './admin-consul-pedidos/admin-consul-pedidos.component';
+import { HistorialComponent } from './historial/historial.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AdminConsulPedidosComponent } from './admin-consul-pedidos/admin-consul
     AdminAddProvComponent,
     AdminConsulProvComponent,
     AdminConsulIngresosComponent,
-    AdminConsulPedidosComponent
+    AdminConsulPedidosComponent,
+    HistorialComponent
   ],
   imports: [
     BrowserModule,
