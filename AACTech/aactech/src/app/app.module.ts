@@ -29,6 +29,7 @@ import { AdminConsulIngresosComponent } from './admin-consul-ingresos/admin-cons
 import { AdminConsulPedidosComponent } from './admin-consul-pedidos/admin-consul-pedidos.component';
 import { HistorialComponent } from './historial/historial.component';
 import { DashadminComponent } from './dashadmin/dashadmin.component';
+import { AdminProdEditComponent } from './admin-prod-edit/admin-prod-edit.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { DashadminComponent } from './dashadmin/dashadmin.component';
     AdminConsulIngresosComponent,
     AdminConsulPedidosComponent,
     HistorialComponent,
-    DashadminComponent
+    DashadminComponent,
+    AdminProdEditComponent
   ],
   imports: [
     BrowserModule,

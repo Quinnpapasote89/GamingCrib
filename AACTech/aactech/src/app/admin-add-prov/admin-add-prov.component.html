@@ -2,7 +2,7 @@
 
   <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
     <div class="mb-3">
-      <label class="form-label">NOMBRE</label>
+      <label class="form-label">Nombre</label>
       <input type="email" class="form-control" formControlName="nombre">
     </div>
     <div class="mb-3">
@@ -10,11 +10,11 @@
       <input type="text" class="form-control" formControlName="rfc">
     </div>
     <div class="mb-3">
-      <label class="form-label">DIRECCION</label>
+      <label class="form-label">Calle y No.</label>
       <input type="text" class="form-control" formControlName="direccion">
     </div>
     <div class="mb-3">
-      <label class="form-label">CIUDAD</label>
+      <label class="form-label">Ciudad</label>
       <input type="text" class="form-control" formControlName="ciudad">
     </div>
     <input type="submit" value="Enviar" class="btn btn-info">

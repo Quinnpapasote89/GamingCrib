@@ -7,12 +7,42 @@
       </div>
       <div class="mb-3">
         <label class="form-label">Marca</label>
-        <input type="text" class="form-control" formControlName="marca">
+<!--         <input type="text" class="form-control" formControlName="marca"> -->
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="marca" id="flexRadioDefault1" value="Asus" checked formControlName="marca">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Asus
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="marca" id="flexRadioDefault2" value="Logitech" formControlName="marca">
+        <label class="form-check-label" for="flexRadioDefault2">
+         Logitech
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="marca" id="flexRadioDefault1" value="MSI" formControlName="marca">
+        <label class="form-check-label" for="flexRadioDefault1">
+          MSI
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="marca" id="flexRadioDefault2" value="HyperX" formControlName="marca">
+        <label class="form-check-label" for="flexRadioDefault2">
+          HyperX
+        </label>
       </div>
       <div class="mb-3">
         <label class="form-label">Categoria</label>
-        <input type="text" class="form-control" formControlName="categoria">
+        <!-- <input type="text" class="form-control" formControlName="categoria"> -->
       </div>
+      <select class="form-select" formControlName="categoria">
+        <option selected>Selecciona la categoria...</option>
+        <option value="Computadora">Computadora</option>
+        <option value="Monitor">Monitor</option>
+        <option value="Accesorio">Accesorio</option>
+      </select>
       <div class="mb-3">
         <label class="form-label">Descripcion</label>
         <textarea class="form-control" cols="30" rows="10" formControlName="descripcion"></textarea>

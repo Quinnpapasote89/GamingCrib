@@ -1,14 +1,25 @@
 <app-dashadmin></app-dashadmin>
 
-
-<div>
-    <div *ngFor="let proveedores of proveedor">
-        <div >
-            <h4>{{proveedores.nombre}}</h4>
-            <p>{{proveedores.rfc}}</p>
-            <p>{{proveedores.direccion}}</p>
-            <p>{{proveedores.ciudad}}</p>
-            <button class="btn btn-outline-danger" (click)="onClickDelete(proveedores)">Borrar</button>
-        </div>
-    </div>
-</div>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">RFC</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Calle</th>
+        <th scope="col">Ciudad</th>
+        <th cope="col">Borrar</th>
+        <th cope="col">Modificar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proveedores of proveedor">
+        <th scope="row">{{proveedores.rfc}}</th>
+        <td>{{proveedores.nombre}}</td>
+        <td>{{proveedores.direccion}}</td>
+        <td>{{proveedores.ciudad}}</td>
+        <td><button class="btn btn-outline-danger" (click)="onClickDelete(proveedores)">Borrar</button></td>
+        <td><button class="btn btn-outline-success" >Modificar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  

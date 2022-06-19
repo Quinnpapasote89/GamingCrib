@@ -24,6 +24,7 @@ export class DataService {
   deleteProd(producto: Productos){
     const prodDocRef=doc(this.firestore, `productos/${producto.id}`);
     return deleteDoc(prodDocRef);
-
   }
+
+  
 }
