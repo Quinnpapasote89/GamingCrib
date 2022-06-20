@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Pedidos from '../interfaces/pedidos';
 import { DatapedidosService } from '../services/datapedidos.service';
+import { CarritoService } from '../services/carrito.service';
 
 @Component({
   selector: 'app-admin-consul-pedidos',
@@ -9,10 +10,10 @@ import { DatapedidosService } from '../services/datapedidos.service';
 })
 export class AdminConsulPedidosComponent implements OnInit {
 
-  pedido: Pedidos[];
+  pedidos: Pedidos[];
 
-  constructor(private dataPedido: DatapedidosService) {
-    this.pedido=[{
+  constructor(private dataPedido: DatapedidosService,private clienteService: CarritoService) {
+    this.pedidos=[{
       nombre: '',
       precio: ' ',
       marca: ' ',
@@ -22,15 +23,14 @@ export class AdminConsulPedidosComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.dataPedido.getpedidos().subscribe(pedido=>{
-      this.pedido=pedido;
-      console.log(pedido);
-    });
+     this.pedidosGen();
   }
 
-  async onClickDelete(pedido: Pedidos){
-    const response = await this.dataPedido.deletepedido(pedido);
-    console.log(response);
-  }
+  pedidosGen(){
+    this.clienteService.getCarrito().subscribe(pedidos=>{
+      this.pedidos=pedidos;
+      console.log(pedidos);
+    });
+  } 
 
 }

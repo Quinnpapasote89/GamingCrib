@@ -1,12 +1,23 @@
 <app-dashadmin></app-dashadmin>
 
-<div>
-    <div *ngFor="let pedidos of pedido">
-        <div >
-            <h4>{{pedidos.nombre}}</h4>
-            <p>{{pedidos.cliente}}</p>
-            <p>{{pedidos.precio}}</p>
-            <button class="btn btn-outline-danger" (click)="onClickDelete(pedidos)">Borrar</button>
-        </div>
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Cliente</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pedido of pedidos">
+            <th scope="row">{{pedido.cliente}}</th>
+            <td>{{pedido.nombre}}</td>
+            <td>{{pedido.marca}}</td>
+            <td>${{pedido.precio}}</td>
+          </tr>
+        </tbody>
+    </table>
     </div>
-</div>

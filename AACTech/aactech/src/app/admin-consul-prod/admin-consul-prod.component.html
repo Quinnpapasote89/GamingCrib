@@ -1,6 +1,6 @@
 <app-dashadmin></app-dashadmin>
 
-
+<div class="container">
 <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -10,7 +10,6 @@
         <th scope="col">Descripcion</th>
         <th scope="col">Precio</th>
         <th cope="col">Borrar</th>
-        <th cope="col">Modificar</th>
       </tr>
     </thead>
     <tbody>
@@ -21,8 +20,7 @@
         <td>{{productos.descripcion}}</td>
         <td>${{productos.precio}}</td>
         <td><button class="btn btn-outline-danger" (click)="onClickDelete(productos)">Borrar</button></td>
-        <td><button class="btn btn-outline-success" >Modificar</button></td>
       </tr>
     </tbody>
-  </table>
-  
+</table>
+</div>
