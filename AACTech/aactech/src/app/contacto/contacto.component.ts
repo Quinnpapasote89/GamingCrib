@@ -37,7 +37,7 @@ export class ContactoComponent implements OnInit {
       asuntoF: this.asunto?.value,
       mensajeF: this.mensaje?.value
     }
-    this.mail.enviarEmail("http://localhost:3000/sendmail", info).subscribe(
+    this.mail.enviarEmail("http://localhost:3080/sendmail", info).subscribe(
       (data: any) => {
         let res:any = data; 
       },
