@@ -14,8 +14,10 @@ export class AdminConsulPedidosComponent implements OnInit {
   constructor(private dataPedido: DatapedidosService) {
     this.pedido=[{
       nombre: '',
-      precio: '',
-      cliente: ''
+      precio: ' ',
+      marca: ' ',
+      cliente: ' '
+
     }]
    }
 

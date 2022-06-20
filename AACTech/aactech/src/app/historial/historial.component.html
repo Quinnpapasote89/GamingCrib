@@ -1,1 +1,16 @@
-<p>historial works!</p>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pedido of pedidos">
+        <th scope="row" *ngIf="pedido.cliente==usuario">{{pedido.nombre}}</th>
+        <td *ngIf="pedido.cliente==usuario">{{pedido.marca}}</td>
+        <td *ngIf="pedido.cliente==usuario">{{pedido.precio}}</td>
+      </tr>
+    </tbody>
+  </table>

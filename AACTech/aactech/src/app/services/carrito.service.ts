@@ -1,26 +1,25 @@
 import { Injectable } from '@angular/core';
-import Productos from '../interfaces/productos';
+import { collectionData, Firestore } from '@angular/fire/firestore';
+import { addDoc, collection, deleteDoc, doc } from 'firebase/firestore';
+import { Observable } from 'rxjs';
+import Pedidos from '../interfaces/pedidos';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarritoService {
 
-  constructor() { }
+  constructor(private firestore: Firestore) { }
 
-  loadCarrito(){
-
+  addCarrito(pedido: Pedidos){
+    const productoRef=collection(this.firestore, 'carrito');
+    return addDoc(productoRef, pedido);
   }
 
-  getCarrito(){
-
+  getCarrito():Observable<Pedidos[]>{
+    const productoRef=collection(this.firestore, 'carrito');
+    return collectionData(productoRef,{idField: 'id'}) as Observable<Pedidos[]>;
   }
+  
 
-  addProducto(producto:Productos){
-
-  }
-
-  removeProducto(producto:Productos){
-    
-  }
 }
